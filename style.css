@@ -1429,3 +1429,52 @@ section {
 .achievement-card:nth-child(3) .achievement-metric {
   animation-delay: 0.3s;
 }
+
+.credentials {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.credentials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap; /* keep images in one row */
+  align-items: center;
+}
+
+.credential-card {
+  flex: 1 1 220px;
+  max-width: 220px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.credential-image {
+  max-width: 100%;
+  max-height: 130px; /* limit height to keep sizes uniform */
+  object-fit: contain;
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .credentials-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .credential-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
