@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Incident Executive Briefing</title>
+    <link rel="stylesheet" href="style_cp.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide Navigation -->
+        <div class="slide-navigation">
+            <button id="prevBtn" class="nav-btn nav-btn--prev" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+                Previous
+            </button>
+
+            <div class="slide-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+            </div>
+
+            <button id="nextBtn" class="nav-btn nav-btn--next">
+                Next
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: Incident Overview -->
+            <div class="slide active" data-slide="0">
+                <div class="slide-content">
+                    <h1 class="slide-title">Critical Security Incident - Contained & Under Investigation</h1>
+
+                    <div class="incident-header">
+                        <div class="incident-details">
+                            <div class="detail-item">
+                                <span class="label">Incident ID:</span>
+                                <span class="value">INC-2025-0904-001</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Date/Time:</span>
+                                <span class="value">September 4th, 2025, 08:17 AM</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Threat Actor:</span>
+                                <span class="value">CrimsonPanda APT Group</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Attack Type:</span>
+                                <span class="value">Targeted phishing → credential theft → data exfiltration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="status-section">
+                        <h2 class="section-title">Current Status</h2>
+                        <div class="status-grid">
+                            <div class="status-item status--complete">
+                                <div class="status-icon">✅</div>
+                                <div class="status-content">
+                                    <h3>CONTAINED</h3>
+                                    <p>All affected systems isolated within 4 hours</p>
+                                </div>
+                            </div>
+                            <div class="status-item status--complete">
+                                <div class="status-icon">✅</div>
+                                <div class="status-content">
+                                    <h3>OPERATIONS RESTORED</h3>
+                                    <p>Customer loan processing back online</p>
+                                </div>
+                            </div>
+                            <div class="status-item status--progress">
+                                <div class="status-icon">🔍</div>
+                                <div class="status-content">
+                                    <h3>UNDER INVESTIGATION</h3>
+                                    <p>Forensic analysis in progress</p>
+                                </div>
+                            </div>
+                            <div class="status-item status--progress">
+                                <div class="status-icon">⚖️</div>
+                                <div class="status-content">
+                                    <h3>LEGAL/COMPLIANCE</h3>
+                                    <p>Regulatory assessment underway</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="key-message">
+                        <p>Swift detection and response minimized business impact. No ongoing threat to operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Attack Timeline -->
+            <div class="slide" data-slide="1">
+                <div class="slide-content">
+                    <h1 class="slide-title">How the Attack Unfolded</h1>
+
+                    <div class="timeline-section">
+                        <div class="timeline-table">
+                            <div class="timeline-row timeline-header">
+                                <div class="time-col">Time</div>
+                                <div class="event-col">Event</div>
+                                <div class="impact-col">Impact</div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="time-col">08:17 AM</div>
+                                <div class="event-col">EDR detects suspicious PowerShell execution</div>
+                                <div class="impact-col">Finance workstation compromised</div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="time-col">08:25 AM</div>
+                                <div class="event-col">Lateral movement to domain controller</div>
+                                <div class="impact-col">Authentication system probed</div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="time-col">08:30 AM</div>
+                                <div class="event-col">File encryption & data exfiltration begins</div>
+                                <div class="impact-col">15,000 customer records at risk</div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="time-col">08:47 AM</div>
+                                <div class="event-col">SOC escalation & IR team activation</div>
+                                <div class="impact-col">Response team mobilized</div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="time-col">12:47 PM</div>
+                                <div class="event-col">Complete containment achieved</div>
+                                <div class="impact-col">Systems isolated, operations restored</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technical-summary">
+                        <h2 class="section-title">Technical Summary</h2>
+                        <ul class="summary-list">
+                            <li>Initial Vector: Spear phishing email targeting Finance staff</li>
+                            <li>Persistence: PowerShell-based backdoor installation</li>
+                            <li>Escalation: Domain controller credential harvesting</li>
+                            <li>Impact: Selective encryption + data theft to Eastern Europe</li>
+                        </ul>
+                        <p class="attribution">Attribution confidence: High (indicators match known CrimsonPanda TTPs)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Business Impact -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h1 class="slide-title">Impact Analysis & Recovery Metrics</h1>
+
+                    <div class="impact-grid">
+                        <div class="impact-section">
+                            <h2 class="section-title">Financial Impact</h2>
+                            <div class="impact-table">
+                                <div class="impact-row impact-header">
+                                    <div class="category-col">Category</div>
+                                    <div class="cost-col">Cost</div>
+                                    <div class="details-col">Details</div>
+                                </div>
+                                <div class="impact-row">
+                                    <div class="category-col">Revenue Loss</div>
+                                    <div class="cost-col">$125,000</div>
+                                    <div class="details-col">4-hour customer loan system outage</div>
+                                </div>
+                                <div class="impact-row">
+                                    <div class="category-col">Response Costs</div>
+                                    <div class="cost-col">$265,500</div>
+                                    <div class="details-col">Forensics, restoration, IR team</div>
+                                </div>
+                                <div class="impact-row total-row">
+                                    <div class="category-col">Total Direct Impact</div>
+                                    <div class="cost-col">$390,500</div>
+                                    <div class="details-col">Immediate measurable costs</div>
+                                </div>
+                                <div class="impact-row">
+                                    <div class="category-col">Potential Additional</div>
+                                    <div class="cost-col">TBD</div>
+                                    <div class="details-col">Regulatory fines, legal fees, reputation</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metrics-section">
+                            <h2 class="section-title">Operational Metrics</h2>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <h3>Mean Time to Detection (MTTD)</h3>
+                                    <div class="metric-value">30 minutes</div>
+                                    <div class="rating excellent">★★★★★</div>
+                                </div>
+                                <div class="metric-item">
+                                    <h3>Mean Time to Containment</h3>
+                                    <div class="metric-value">4 hours</div>
+                                    <div class="rating excellent">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <h2 class="section-title">Recovery Status</h2>
+                            <div class="recovery-items">
+                                <div class="recovery-item">
+                                    <span class="recovery-label">Finance operations</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                        <span class="progress-text">100% restored</span>
+                                    </div>
+                                </div>
+                                <div class="recovery-item">
+                                    <span class="recovery-label">Customer services</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                        <span class="progress-text">Fully operational</span>
+                                    </div>
+                                </div>
+                                <div class="recovery-item">
+                                    <span class="recovery-label">Forensic investigation</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                        <span class="progress-text">60% complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Recommendations -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h1 class="slide-title">Strengthening Our Security Posture</h1>
+
+                    <div class="recommendations-grid">
+                        <div class="recommendation-block">
+                            <h3>Enhanced Security Awareness Program</h3>
+                            <ul>
+                                <li>Increase phishing training frequency to monthly</li>
+                                <li>Implement role-based training for high-risk departments</li>
+                                <li>Add accountability metrics for training completion</li>
+                            </ul>
+                            <div class="investment-amount">$165,000 annually</div>
+                        </div>
+
+                        <div class="recommendation-block">
+                            <h3>Comprehensive Access Control Review</h3>
+                            <ul>
+                                <li>Enterprise-wide privilege audit and cleanup</li>
+                                <li>Enforce least-privilege access principles</li>
+                                <li>Implement privileged access management (PAM) solution</li>
+                            </ul>
+                            <div class="investment-amount">$270,000 - $620,000</div>
+                        </div>
+
+                        <div class="recommendation-block">
+                            <h3>Advanced Threat Detection Enhancement</h3>
+                            <ul>
+                                <li>Upgrade EDR integration and threat intelligence feeds</li>
+                                <li>Improve SOC monitoring and response workflows</li>
+                            </ul>
+                            <div class="investment-amount">$265,000 - $435,000 (first year)</div>
+                        </div>
+                    </div>
+
+                    <div class="executive-decisions">
+                        <h2 class="section-title">Executive Decisions Required</h2>
+                        <div class="decisions-checklist">
+                            <label class="decision-item">
+                                <input type="checkbox" class="decision-checkbox">
+                                <span class="checkmark"></span>
+                                <span class="decision-text">Approve recommended security investment ($700K - $1.2M)</span>
+                            </label>
+                            <label class="decision-item">
+                                <input type="checkbox" class="decision-checkbox">
+                                <span class="checkmark"></span>
+                                <span class="decision-text">Authorize external forensics firm engagement extension</span>
+                            </label>
+                            <label class="decision-item">
+                                <input type="checkbox" class="decision-checkbox">
+                                <span class="checkmark"></span>
+                                <span class="decision-text">Approve customer/regulatory notification strategy</span>
+                            </label>
+                            <label class="decision-item">
+                                <input type="checkbox" class="decision-checkbox">
+                                <span class="checkmark"></span>
+                                <span class="decision-text">Endorse enhanced security awareness mandate</span>
+                            </label>
+                        </div>
+                        <div class="timeline-notice">
+                            <strong>Timeline:</strong> Full implementation within 6 months
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / 4
+        </div>
+    </div>
+
+    <script src="cpapp.js"></script>
+</body>
+</html>
