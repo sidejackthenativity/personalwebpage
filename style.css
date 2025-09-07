@@ -1058,6 +1058,15 @@ section {
   overflow: hidden;
 }
 
+.project-image img {
+  width: 100%;           /* Make the image take full width of its container */
+  height: auto;          /* Maintain aspect ratio to prevent squashing */
+  object-fit: contain;   /* Ensure the entire image fits inside without cropping */
+  max-height: 250px;     /* Optional: limit max height to keep images uniform */
+  display: block;        /* Remove inline spacing issues */
+}
+
+
 .project-image .image-placeholder {
   height: 100%;
   background: var(--color-bg-2);
